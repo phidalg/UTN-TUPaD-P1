@@ -124,3 +124,22 @@ if haySesgo:
         print("Hay sesgo negativo.")
 else:
     print("No hay sesgo.")
+
+
+# Ejercicio 7
+# Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado
+# termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por
+# pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
+# pantalla.
+
+# Primero, se solicita el ingreso de un string:
+frase = str(input("Ingrese una frase o palabra"))
+
+# Se obtiene la ultima letra y se verifica si es vocal:
+ultimaEsVocal = frase[-1] in "aeiouAEIOU"
+
+# Se imprime la salida correspondiente:
+if ultimaEsVocal:
+    print(f"{frase}!")
+else:
+    print(frase)
