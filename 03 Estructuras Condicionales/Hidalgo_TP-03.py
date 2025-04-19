@@ -143,3 +143,63 @@ if ultimaEsVocal:
     print(f"{frase}!")
 else:
     print(frase)
+
+
+# Ejercicio 8
+# Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3
+# dependiendo de la opción que desee:
+# 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
+# 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
+# 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.
+
+# Primero, pedimos ingresar el nombre al usuario:
+nombre = str(input("Ingrese su nombre: "))
+
+# Pedir al usuario que ingrese la opcion que prefiera:
+print("Elija la opción:\n1 --> Si quiere su nombre en mayúsculas.\n2 --> Si quiere su nombre en minúsculas.\n3 --> Si quiere su nombre con la primera letra mayúscula.")
+opcion = int(input("Ingrese el número de opción deceado (1-3): "))
+
+# Imprimir el nombre de acuerdo a la opcion elegida:
+if opcion == 1:
+    print(nombre.upper())
+elif opcion == 2:
+    print(nombre.lower())
+elif opcion == 3:
+    print(nombre.title())
+else:
+    print(f"{opcion} no es una opción válida.")
+
+
+# Ejercicio 9
+# Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la
+# magnitud en una de las siguientes categorías según la escala de Richter e imprima el
+# resultado por pantalla:
+# ● Menor que 3: "Muy leve" (imperceptible).
+# ● Mayor o igual que 3 y menor que 4: "Leve" (ligeramente perceptible).
+# ● Mayor o igual que 4 y menor que 5: "Moderado" (sentido por personas, pero
+#   generalmente no causa daños).
+# ● Mayor o igual que 5 y menor que 6: "Fuerte" (puede causar daños en estructuras
+#   débiles).
+# ● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
+# ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+# Ingresar la magnitud del terremoto:
+magnitud = float(input("Ingrese la magnitud del terremoto en escala Richter: "))
+
+# Clasificar de acuerdo a la magnitud
+if magnitud < 3:
+    categoria = "Muy leve (imperceptible)."
+elif magnitud >= 3 and magnitud < 4:
+    categoria = "Leve (ligeramente perceptible)."
+elif magnitud >= 4 and magnitud < 5:
+    categoria = "Moderado (sentido por personas, pero generalmente no causa daños)."
+elif magnitud >= 5 and magnitud < 6:
+    categoria = "Fuerte (puede causar daños en estructuras débiles)."
+elif magnitud >= 6 and magnitud < 7:
+    categoria = "Muy Fuerte (puede causar daños significativos)."
+else:
+    categoria = "Extremo (puede causar graves daños a gran escala)."
+
+# Imprimir la salida:
+print(f"Un sismo de magnitud {magnitud} en la escala de Richter\nes {categoria}")
+
