@@ -203,3 +203,49 @@ else:
 # Imprimir la salida:
 print(f"Un sismo de magnitud {magnitud} en la escala de Richter\nes {categoria}")
 
+
+# Ejercicio 10
+# Utilizando la información aportada en la siguiente tabla sobre las estaciones del año [...]
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
+# del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
+# si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+# Pedimos que el usuario ingrese los datos:
+print("Ingrese el hemisferio en el que se encuentra:")
+hemisferio = input("S --> Hemisferio sur.\nN --> Hemisferio norte.\n")
+mes = int(input("Ingrese el mes en formato MM: "))
+dia = int(input("Ingrese el día en formato DD: "))
+
+# Cambiamos el valor "hemisferio" a mayúscula por si el usuario lo hubiera ingresado en minúscula
+hemisferio = hemisferio.upper()
+
+# Calculamos la estacion de acuerdo a los datos ingresados.
+if (mes == 12 and dia >= 21) or (mes < 3) or (mes == 3 and dia <= 20):
+    if hemisferio == "S":
+        estacion = "verano"
+    else:
+        estacion = "invierno"
+
+if (mes == 3 and dia >= 21) or (mes == 4 or mes == 5) or (mes == 6 and dia <= 20):
+    if hemisferio == "S":
+        estacion = "otoño"
+    else:
+        estacion = "primavera"
+
+if (mes == 6 and dia >= 21) or (mes == 7 or mes == 8) or (mes == 9 and dia <= 20):
+    if hemisferio == "S":
+        estacion = "invierno"
+    else:
+        estacion = "verano"
+
+if (mes == 9 and dia >= 21) or (mes == 10 or mes == 11) or (mes == 12 and dia <= 20):
+    if hemisferio == "S":
+        estacion = "primavera"
+    else:
+        estacion = "otoño"
+
+# Verificamos que el usuario haya ingresado datos válidos e imprimimos la salida
+if not (1 <= mes <= 12 and 1 <= dia <= 31 and hemisferio in ("S", "N")):
+    print("Alguno de los datos ingresados no es correcto.")
+else:
+    print(f"Estamos en {estacion}.")
