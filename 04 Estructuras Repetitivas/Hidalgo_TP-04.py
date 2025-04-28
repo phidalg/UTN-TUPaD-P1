@@ -36,3 +36,39 @@ for i in menor, mayor:
     sumatoria += i
 
 print(f"La suma de los números enteros comprendidos entre {menor} y {mayor} es {sumatoria}")
+
+
+# Ejercicio 4
+# Elabora un programa que permita al usuario ingresar números enteros y los sume en secuencia.
+# El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese un 0
+
+num = ""
+suma = 0
+
+print("Ingrese números enteros para sumarlos o 0 para detener el programa y ver el resultado.")
+while num != 0:
+    num = int(input("Ingrese un número: "))
+    suma += num
+    
+print(f"La suma de todos los números ingresados es {suma}")
+
+
+# Ejercicio 5
+# Crea un juego en el que el usuario deba adivinar un número aleatorio entre 0 y 9. Al final,
+# el programa debe mostrar cuántos intentos fueron necesarios para acertar el número.
+
+import random
+
+num1 = random.randint(0, 9)
+num2 = ""
+intentos = 0
+
+while num1 != num2:
+    intentos += 1
+    num2 = int(input("Ingrese un número del 0 al 9: "))
+    if num1 == num2:
+        print("¡Correcto!")
+    else:
+        print("Incorrecto, intente nuevamente.")
+
+print(f"Le tomó {intentos} intentos adivinar el número.")
