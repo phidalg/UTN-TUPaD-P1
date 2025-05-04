@@ -72,3 +72,52 @@ while num1 != num2:
         print("Incorrecto, intente nuevamente.")
 
 print(f"Le tomó {intentos} intentos adivinar el número.")
+
+
+# Ejercicio 6
+# Desarrolla un programa que imprima en pantalla todos los números pares comprendidos
+# entre 0 y 100, en orden decreciente.
+
+for i in range(100, 0, -2):
+    print(i)
+
+
+# Ejercicio 7
+# Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un
+# número entero positivo indicado por el usuario.
+
+num = -1
+sumatoria = 0
+
+while num < 0:
+    num = int(input("Ingrese un número entero positivo: "))
+
+for i in range(0, num):
+    sumatoria += i
+
+print(f"La suma de los números enteros comprendidos entre 0 y {num} es {sumatoria}")
+
+
+# Ejercicio 8
+# Escribe un programa que permita al usuario ingresar 100 números enteros. Luego, el
+# programa debe indicar cuántos de estos números son pares, cuántos son impares, cuántos
+# son negativos y cuántos son positivos.
+
+positivos = 0
+negativos = 0
+pares = 0
+impares = 0
+
+for i in range(0, 100):
+    num = int(input(f"Ha ingreseado {i} de 100 números, ingrese un número: "))
+    if num % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+    
+    if num < 0:
+        negativos += 1
+    else:
+        positivos += 1
+
+print(f"Ha ingresado {positivos} números positivos, {negativos} negativos, {pares} pares y {impares} impares.")
