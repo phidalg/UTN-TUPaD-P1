@@ -32,7 +32,7 @@ else:
     mayor = num2
     menor = num1
 
-for i in menor, mayor:
+for i in range(menor + 1, mayor):
     sumatoria += i
 
 print(f"La suma de los números enteros comprendidos entre {menor} y {mayor} es {sumatoria}")
