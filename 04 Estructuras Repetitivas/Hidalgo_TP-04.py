@@ -121,3 +121,34 @@ for i in range(0, 100):
         positivos += 1
 
 print(f"Ha ingresado {positivos} números positivos, {negativos} negativos, {pares} pares y {impares} impares.")
+
+
+# Ejercicio 9
+# Elabora un programa que permita al usuario ingresar 100 números enteros
+# y luego calcule la media de esos valores.
+
+suma = 0
+media = 0
+
+for i in range(0, 100):
+    suma += int(input(f"Ha ingresado {i} de 100 números, ingrese un número: "))
+
+if suma > 0:
+    media = suma / 100
+
+print(f"La media de los valores ingresados es {media}.")
+
+
+# Ejercicio 10
+# Escribe un programa que invierta el orden de los dígitos de un número ingresado
+# por el usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745.
+
+num = int(input("Ingrese un número: "))
+num_invertido = 0
+
+while num > 0:
+    num_invertido *= 10
+    num_invertido += num % 10
+    num = num // 10
+
+print(num_invertido)
